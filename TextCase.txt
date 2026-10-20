@@ -1,0 +1,80 @@
+Test Case: Kara David's Wish Note App
+
+1. Test Case ID: TC-DataEntry-001
+
+2. Test Case Title: Data Entry - Valid
+
+3. Test Case Description: Functional testing of the Data Entry page with backend validation using MySQL queries.
+
+4. Preconditions:
+
+- Kara David's Wish Note App is running locally.
+- The "birthday_wishnote" database and "main_corrupt_politicians" table exist.
+- The Data Entry page is accessible using Chrome.
+
+5. Test Data: Five valid entries containing First Name, Last Name, Government Position, and Location within their maximum character limits.
+
+6. Test Steps:
+
+a. Verify that the form contains labels in the proper order and the text boxes are writable.
+
+b. Verify the "Send Wish Note" button.
+
+c. Enter valid test data into the respective fields.
+
+d. Click "Send Wish Note" and verify that a modal appears.
+
+e. Verify that the modal contains the same information as the test data.
+
+f. Click the Cancel button.
+
+g. Click "Send Wish Note" again and then click "Confirm & Send".
+
+h. Verify that a successful entry message appears on the Data Entry page.
+
+i. Verify the test data in the database using the following MySQL query:
+
+USE birthday_wishnote;
+SELECT * FROM main_corrupt_politicians;
+
+7. Expected Results:
+
+a. The form displays the four labels in the correct order, and all text boxes are writable.
+
+b. The "Send Wish Note" button changes color on hover and is enabled.
+
+c. All fields accept valid test data within their character limits.
+
+d. A verification modal appears after clicking "Send Wish Note".
+
+e. The modal displays the entered values correctly, including Location.
+
+f. The Cancel button closes the modal without submitting the form.
+
+g. Clicking "Confirm & Send" submits the form data.
+
+h. A success message appears after successful submission.
+
+i. The database contains the submitted First Name, Last Name, and Government Position. Location may be missing because the application intentionally omits it from the INSERT query.
+
+8. Actual Results:
+
+a. The form displays the four labels in the correct order, and all text boxes are writable.
+
+b. The "Send Wish Note" button changes color on hover and is enabled.
+
+c. The fields accept valid test data.
+
+d. Pending Execution — complete after testing.
+
+e. Pending Execution — complete after testing.
+
+f. Pending Execution — complete after testing.
+
+g. Pending Execution — complete after testing.
+
+h. Pending Execution — complete after testing.
+
+i. Pending Execution — complete after checking the database.
+
+9. Status: Pending Execution — update to Passed or Failed after completing the test.
